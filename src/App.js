@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 import Comments from "./Comments";
 import CommentsForm from "./CommentsForm";
 import Artworks from "./Artworks";
+import Homepage from "./Homepage";
 import './App.css';
 
 function App() {
@@ -21,12 +22,13 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
+        <Route exact path="/home" element={<Homepage />} />
         <Route exact path="/paintings" element={<Artworks artworks={artworks} type="painting" />} />
         <Route exact path="/statues" element={<Artworks artworks={artworks} type="statue" />} />
         <Route exact path="/fossils" element={<Artworks artworks={artworks} type="fossil" />} />
       </Routes>
       <Comments />
-      <CommentsForm />
+      {/* <CommentsForm /> */}
     </div>
   );
 }
