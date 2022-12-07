@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function CommentsForm() {
     const [comment, setComment] = useState([])
@@ -11,6 +11,8 @@ function CommentsForm() {
     function handleChange(event) {
         setComment(event.target.value)
     }
+
+    console.log(comment)
 
     return (
         <div>
