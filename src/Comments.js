@@ -1,17 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-function Comments() {
-    const [comments, setComments] = useState([])
-
-    useEffect(() => {
-        fetch("http://localhost:3000/comments")
-          .then((response) => response.json())
-          .then((data) => {
-            console.log(data)
-            setComments(data);
-          });
-      }, []);
-
+function Comments({ comments }) {
     return (
     <div>
         {comments.map((comment) =>
