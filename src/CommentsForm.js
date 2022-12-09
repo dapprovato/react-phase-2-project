@@ -24,9 +24,9 @@ function CommentsForm({ onSubmit }) {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="text" id="name" placeholder="name" onChange={handleChange} />
-                <input type="text" id="comment" placeholder="comment" onChange={handleChange} />
-                <button type="submit">Submit comment</button>
+                <input className="form" type="text" id="name" placeholder="name" onChange={handleChange} />
+                <input className="form" type="text" id="comment" placeholder="comment" onChange={handleChange} />
+                <button className="button" type="submit">Submit comment</button>
             </form>
         </div>
     )
