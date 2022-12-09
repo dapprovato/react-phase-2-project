@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./NavBar";
-import Comments from "./Comments";
-import CommentsForm from "./CommentsForm";
 import Artworks from "./Artworks";
 import Homepage from "./Homepage";
 import './App.css';
@@ -27,8 +25,6 @@ function App() {
         <Route exact path="/statues" element={<Artworks artworks={artworks} type="statue" />} />
         <Route exact path="/fossils" element={<Artworks artworks={artworks} type="fossil" />} />
       </Routes>
-      <Comments />
-      {/* <CommentsForm /> */}
     </div>
   );
 }
